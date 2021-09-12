@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const l1 = [0];
+    const l2 = [0];
+
+    const addTwoNumbers = (l1, l2) => {
+        const arr = [];
+        if (l1 !== null || l2 !== null) {
+            const l1Num = l1 !== null ? l1.reverse().join().replace(/,/g, '') - 0 : 0;
+            const l2Num = l2 !== null ? l2.reverse().join().replace(/,/g, '') - 0 : 0;
+            const num = (l1Num + l2Num).toString().split('').reverse();
+            for (let v in num) {
+                arr.push(num[v] - 0);
+            }
+            return arr;
+        }else{
+            return null;
+        }
+
+    }
+    console.log(addTwoNumbers(l1, l2));
+</script>
+
+</html>
